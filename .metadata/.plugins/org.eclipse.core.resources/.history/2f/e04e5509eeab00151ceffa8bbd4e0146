@@ -1,0 +1,62 @@
+package com.bimmap.dao;
+
+import com.bimmap.model.Userdict;
+import com.bimmap.model.UserdictExample;
+import java.util.List;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+
+public interface UserdictMapper {
+    int countByExample(UserdictExample example);
+
+    int deleteByExample(UserdictExample example);
+
+    @Delete({
+        "delete from userdict",
+        "where id = #{id,jdbcType=INTEGER}"
+    })
+    int deleteByPrimaryKey(Integer id);
+
+    @Insert({
+        "insert into userdict (id, userName, ",
+        "password, role, ",
+        "manageRegion)",
+        "values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, ",
+        "#{password,jdbcType=VARCHAR}, #{role,jdbcType=INTEGER}, ",
+        "#{manageregion,jdbcType=INTEGER})"
+    })
+    int insert(Userdict record);
+
+    int insertSelective(Userdict record);
+
+    List<Userdict> selectByExample(UserdictExample example);
+
+    @Select({
+        "select",
+        "id, userName, password, role, manageRegion",
+        "from userdict",
+        "where id = #{id,jdbcType=INTEGER}"
+    })
+    @ResultMap("BaseResultMap")
+    Userdict selectByPrimaryKey(Integer id);
+
+    int updateByExampleSelective(@Param("record") Userdict record, @Param("example") UserdictExample example);
+
+    int updateByExample(@Param("record") Userdict record, @Param("example") UserdictExample example);
+
+    int updateByPrimaryKeySelective(Userdict record);
+
+    @Update({
+        "update userdict",
+        "set userName = #{username,jdbcType=VARCHAR},",
+          "password = #{password,jdbcType=VARCHAR},",
+          "role = #{role,jdbcType=INTEGER},",
+          "manageRegion = #{manageregion,jdbcType=INTEGER}",
+        "where id = #{id,jdbcType=INTEGER}"
+    })
+    int updateByPrimaryKey(Userdict record);
+}

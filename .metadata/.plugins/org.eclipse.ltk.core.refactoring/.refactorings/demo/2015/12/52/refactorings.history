@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;mybatis&apos;&#x0D;&#x0A;- Original project: &apos;demo&apos;&#x0D;&#x0A;- Destination element: &apos;mybatis&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     generatorConfig.xml&#x0D;&#x0A;     mybatis-config.xml&#x0D;&#x0A;     mapping" description="Copy elements" element1="target/demo/WEB-INF/classes/mybatis/generatorConfig.xml" element2="target/demo/WEB-INF/classes/mybatis/mybatis-config.xml" element3="target/demo/WEB-INF/classes/mybatis/mapping" files="2" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1451140763568" target="/bimmap/src/main/webapp/WEB-INF/configs/mybatis" units="0" version="1.0"/>
+</session>

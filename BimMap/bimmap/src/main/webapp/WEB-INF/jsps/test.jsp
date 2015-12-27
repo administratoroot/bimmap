@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
- Bimmap
+ Bimmap1
 </body>
 </html>

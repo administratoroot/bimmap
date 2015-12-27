@@ -1,0 +1,42 @@
+package com.bimmap.dao;
+
+import com.bimmap.model.UserDict;
+
+public interface UserDictMapper {
+	
+	/**
+	 * 添加新用户
+	 * @param UserDict
+	 * @return
+	 */
+	int addUser(UserDict UserDict);
+	
+	/**
+	 * 用户名唯一性校验
+	 * @param UserDict
+	 * @return
+	 */
+	UserDict checkUserName(String userName);
+	
+	/**
+	 * 登录验证，验证用户名密码
+	 * @param UserDict
+	 * @return
+	 */
+	UserDict validateLogin(UserDict UserDict);
+	
+	/**
+	 * 根据id查询用户信息
+	 * @param userId 用户id
+	 * @return
+	 */
+	UserDict selectUserById(int userId);
+	
+	/**
+	 * 修改用户信息
+	 * @param UserDict
+	 * @return
+	 */
+	int updateUser(UserDict UserDict);
+	
+}

@@ -1,0 +1,6 @@
+package com.bimmap.model;
+
+public class userDict {
+	private Integer id;
+	
+}
